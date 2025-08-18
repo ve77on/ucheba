@@ -23,6 +23,7 @@
 # car1.display_info()
 
 
+
 # Создайте класс Library с атрибутом books, который представляет собой список книг.
 # Добавьте методы add_book(book) для добавления книги в библиотеку и display_books() для вывода списка всех книг.
 # Создайте объект класса Library, добавьте несколько книг и выведите список книг, используя методы объекта.
@@ -34,21 +35,56 @@
 # •	Программа должна использовать методы add_book(book) и display_books() на созданном объекте для добавления книг и вывода списка книг.
 
 
-class Library:
-    def __init__(self, books):
-        self.books = books
+# class Library:
+#     def __init__(self, books):
+#         self.books = books
+#
+#     def add_book(self, name_book):
+#         self.books.append(name_book)
+#
+#     def display_books(self):
+#         print(f"Books: {self.books}")
+#
+#
+# collection = Library([])
+#
+# collection.add_book("Harry Potter")
+# collection.display_books()
 
-    def add_book(self, name_book):
-        self.books.append(name_book)
 
-    def display_books(self):
-        print(f"Books: {self.books}")
+# Создайте класс Rectangle с конструктором, который принимает параметры width и height.
+# Добавьте метод area(), который возвращает площадь прямоугольника. Создайте объект этого класса и вычислите его площадь.
+# Требования:
+# •	Программа должна включать класс Rectangle, который содержит конструктор с параметрами width и height.
+# •	В классе Rectangle должен быть метод area(), который возвращает площадь прямоугольника, рассчитанную как произведение ширины и высоты.
+# •	Необходимо создать объект класса Rectangle с заданными шириной и высотой.
+# •	С помощью метода area() создаденного объекта необходимо вычислить и вывести площадь прямоугольника.
+
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        print(self.width * self.height)
 
 
-collection = Library([])
+rectangle1 = Rectangle(5, 10)
 
-collection.add_book("Harry Potter")
-collection.display_books()
+rectangle1.area()
+
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+
+
+rectangle1 = Rectangle(5, 10)
+
+print(rectangle1.area())
 
 
 
