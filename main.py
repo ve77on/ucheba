@@ -56,35 +56,130 @@
 # Добавьте метод area(), который возвращает площадь прямоугольника. Создайте объект этого класса и вычислите его площадь.
 # Требования:
 # •	Программа должна включать класс Rectangle, который содержит конструктор с параметрами width и height.
-# •	В классе Rectangle должен быть метод area(), который возвращает площадь прямоугольника, рассчитанную как произведение ширины и высоты.
-# •	Необходимо создать объект класса Rectangle с заданными шириной и высотой.
-# •	С помощью метода area() создаденного объекта необходимо вычислить и вывести площадь прямоугольника.
+# # •	В классе Rectangle должен быть метод area(), который возвращает площадь прямоугольника, рассчитанную как произведение ширины и высоты.
+# # •	Необходимо создать объект класса Rectangle с заданными шириной и высотой.
+# # •	С помощью метода area() создаденного объекта необходимо вычислить и вывести площадь прямоугольника.
+#
+# class Rectangle:
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+#
+#     def area(self):
+#         print(self.width * self.height)
+#
+#
+# rectangle1 = Rectangle(5, 10)
+#
+# rectangle1.area()
+#
+# class Rectangle:
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+#
+#     def area(self):
+#         return self.width * self.height
+#
+#
+# rectangle1 = Rectangle(5, 10)
+#
+# print(rectangle1.area())
+#
+# Банкир.
+# Создайте класс BankAccount с конструктором, который принимает параметры account_number и initial_balance.
+# Добавьте метод deposit(amount), который пополняет счет, и метод withdraw(amount), который снимает средства со счета.
+# Создайте объект этого класса и выполните несколько операций пополнения и снятия средств.
+# Требования:
+# •	Программа должна включать класс BankAccount, который имеет конструктор, принимающий параметры account_number и initial_balance.
+# •	Класс BankAccount должен содержать метод deposit(amount), который увеличивает баланс счета на указанную сумму.
+# •	Класс BankAccount должен иметь метод withdraw(amount), который уменьшает баланс счета на указанную сумму при условии наличия достаточных средств.
+# •	Программа должна создать объект класса BankAccount и выполнить несколько операций по пополнению и снятию средств, демонстрируя работу методов deposit и withdraw.
 
-class Rectangle:
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
 
-    def area(self):
-        print(self.width * self.height)
+# class BankAccount:
+#     def __init__(self, account_number, initial_balance):
+#         self.account_number = account_number
+#         self.initial_balance = initial_balance
+#
+#     def deposit(self, amount):
+#         self.initial_balance = self.initial_balance + amount
+#         print(f"Остаток на счету {self.initial_balance}")
+#
+#     def withdraw(self, amount):
+#         if self.initial_balance < amount:
+#             print(f"Недостаточно средств, Остаток на счету {self.initial_balance}")
+#         else:
+#             self.initial_balance = self.initial_balance - amount
+#             print(f"Остаток на счету {self.initial_balance}")
+#
+# account1 = BankAccount(123, 1500)
+# account1.deposit(50)
+# account1.withdraw(500)
+
+# Создайте класс Car, который будет иметь публичный атрибут brand и защищенный атрибут _model_.
+# Добавьте методы для получения и установки значения защищенного атрибута _model_.
+# Создайте объект класса Car, установите значения атрибутов и выведите их на экран.
+# Требования:
+# •	Программа должна включать создание класса Car.
+# •	Класс Car должен содержать публичный атрибут brand, который можно будет свободно изменять и читать.
+# •	Класс Car должен содержать защищенный атрибут _model_, доступ к которому должен осуществляться через методы получения и установки значения.
+# •	Класс Car должен содержать метод для получения значения защищенного атрибута _model_ и метод для установки значения защищенного атрибута _model_.
+# •	Программа должна создать объект класса Car, установить значения атрибутов brand и _model_, используя публичные и защищенные методы доступа, и вывести эти значения на экран.
+#
+# class Car:
+#     def __init__(self, brand, _model):
+#         self.brand = brand
+#         self._model = _model
+#
+#     def get_model(self):
+#         return self._model
+#
+#     def set_model(self,_model):
+#         self._model = _model
+#
+# car1 = Car("Toyota", "Rav4")
+# car1.set_model("Prius")
+# print(car1.get_model())
+# print(car1.brand)
+
+# Библиотека.
+# Создайте класс Library, который будет представлять библиотеку книг.
+# Добавьте метод __str__, который будет возвращать строку с информацией о библиотеке с перечнем книг,
+# и метод __len__, который будет возвращать количество книг в библиотеке. Создайте объект класса Library,
+# добавьте в него несколько книг и выведите информацию о библиотеке и количество книг.
+# Требования:
+# •	Программа должна включать класс Library, который представляет библиотеку книг.
+# •	В классе Library должен быть метод __str__, который возвращает строковую информацию о библиотеке с перечнем книг.
+# •	В классе Library должен быть метод __len__, который возвращает количество книг в библиотеке.
+# •	Должна быть возможность добавлять книги в объект класса Library.
+# •	Программа должна выводить информацию о библиотеке с перечнем книг и количество книг с использованием методов __str__ и __len__.
+
+class Library:
+    def __init__(self, *books):
+        self.books = list(books)
+
+    def lib_append(self, book_name):
+        self.books.append(book_name)
+
+    def __str__(self):
+        return f"Books: {self.books}"
+
+    def __len__(self):
+        return len(self.books)
+lib1 = Library("1994")
+lib1.lib_append("HP")
+print(lib1.__str__())
+print(lib1.__len__())
 
 
-rectangle1 = Rectangle(5, 10)
-
-rectangle1.area()
-
-class Rectangle:
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
-
-    def area(self):
-        return self.width * self.height
 
 
-rectangle1 = Rectangle(5, 10)
 
-print(rectangle1.area())
+
+
+
+
 
 
 
