@@ -514,16 +514,41 @@ from symtable import Class
 # •	Класс SimpleIterator должен содержать метод __iter__, который возвращает сам объект итератора.
 # •	Класс SimpleIterator должен содержать метод __next__, который возвращает следующий элемент последовательности и вызывает исключение StopIteration при достижении end.
 
-class SimpleIterator:
-    def __init__(self, start, end):
-        self.start = start
-        seft.end = end
+# class SimpleIterator:
+#     def __init__(self, start, end):
+#         self.start = start
+#         seft.end = end
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         if self.start >= end: raise StopIteration
+#         start = self.start
+#         start += 1
+#         return start
 
-    def __iter__(self):
-        return self
 
-    def __next__(self):
-        if self.start >= end: raise StopIteration
-        start = self.start
-        start += 1
-        return start
+#
+# Напишите класс CollectionIterator, который будет итерироваться по произвольной коллекции (список, строка и т.д.). Реализуйте методы __iter__ и __next__.
+# Требования:
+# •	Программа должна включать определение класса CollectionIterator, который будет предназначен для итерации по произвольной коллекции.
+# •	Класс CollectionIterator должен содержать метод __iter__, который возвращает сам итератор, то есть экземпляр самого себя.
+# •	Класс CollectionIterator должен содержать метод __next__, который возвращает следующий элемент в коллекции. Если элементов больше нет, метод должен вызывать исключение StopIteration.
+#
+#
+# class CollectionIterator:
+#     def __init__(self, collection):
+#         self.collection = collection
+#         self.index = 0
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         if self.index< len(self.collection):
+#             item = self.collection[self.index]
+#             self.index += 1
+#             return  item
+#         else:
+#             raise StopIteration
